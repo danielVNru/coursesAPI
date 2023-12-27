@@ -1,0 +1,30 @@
+{
+  "name": "granate-back",
+  "version": "0.0.1",
+  "description": "",
+  "main": "/#src/index.js",
+  "scripts": {
+    "compts": "tsc -w",
+    "dev": "nodemon .\\dist\\index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielVNru/coursesAPI.git"
+  },
+  "author": "DanielVNru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielVNru/coursesAPI/issues"
+  },
+  "homepage": "https://github.com/danielVNru/coursesAPI#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
