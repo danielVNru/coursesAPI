@@ -1,5 +1,5 @@
 
-import express from 'express'
+import express, { Request } from 'express'
 
 /**
  * Ошибка, сигнализирующая об отсутствии API
@@ -10,3 +10,7 @@ import express from 'express'
 export type error404 = express.Response<{
     error: string
 }>
+
+export type ResWithBody<T> = Request<{}, {}, T>
+export type ResWithParams<T> = Request<T>
+export type ResWithQuery<T> = Request<{}, {}, {}, T>

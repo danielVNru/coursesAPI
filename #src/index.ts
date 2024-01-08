@@ -1,18 +1,14 @@
 
 import express from 'express'
 import { error404 } from './types'
+import {userRouter} from './Routes/UserRoute'
 
-const PORT = 3000
+
 
 const app = express()
 
-app.use(express.json())
+app.use('/api', userRouter)
 
-app.post('/api/reg', (req, res)=>{
-
-    res.json({status: 'ok'})
-
-})
 
 
 app.use((req, res: error404)=>{
@@ -20,6 +16,7 @@ app.use((req, res: error404)=>{
         error: 'API`s not found'
     })
 })
+const PORT = 3000
 
 app.listen(PORT, ()=>{
     console.log('Server started on port: '+ PORT);

@@ -1,15 +1,13 @@
-
 import { Response } from "express"
 import { ResWithBody } from "../types"
 
-export type UserRegData = ResWithBody<{
-    name: string,
+export type UserAuthData = ResWithBody<{
     login: string,
     password: string
 }>
 
-export type UserRegResponce = Response<{
+export type UserAuthResponce = Response<{
     status: string,
     errors?: object,
-    id?: string
+    token?: string
 }>
